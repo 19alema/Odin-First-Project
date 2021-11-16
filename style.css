@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex-direction: column;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.loader.hide {
+    z-index: -999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.para {
+    padding: 20px
+}
+
+/* GLOW BORDES */
+
+.green-glow {
+    border: 5px solid aqua;
+    box-shadow: 0 0 10px azure;
+}
+
+.red-glow {
+    border-color: crimson;
+    box-shadow: 0 0 10px crimson;
+}
+
+.icn-spinner {
+    animation: spin-animation .5s infinite;
+    display: inline-block;
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-color: #000;
+    color: yellow;
+    font-family: Rubik;
+    font-weight: 600;
+}
+
+header,
+footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #231F20;
+}
+
+.game-images .userChoice {
+    padding: .5rem;
+    background-color: #1F2322;
+    margin: 0 1rem;
+    border: 5px solid yellow;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.game-images {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.players {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.players p {
+    font-size: 1.5rem;
+}
+
+.result-score {
+    text-align: center;
+}
+
+.players h3 {
+    text-transform: uppercase;
+    padding: 0 2rem;
+}
+
+.players {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.players p {
+    margin: 1rem;
+}
+
+@media(max-width: 400px) {
+    i {
+        font-size: 10px;
+    }
+
+    .winner-infor {
+        font-size: 3px;
+    }
+
+    header h2 {
+        font-size: 10px;
+    }
+
+    .players p {
+        font-size: 1rem;
+    }
+
+    .result-score {
+        text-align: center;
+    }
+
+    .players h3 {
+        text-transform: uppercase;
+        padding: unset;
+        font-size: 15px
+    }
+
+    footer {
+        font-size: 2px;
+        padding: .5rem;
+    }
+
+
+
+    .para {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .game-images .userChoice {
+        padding: .5rem;
+        background-color: #1F2322;
+        margin: 0 .2rem;
+        border: 5px solid yellow;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
+
+    .game-images {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    main {
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        flex-direction: column;
+    }
+}
